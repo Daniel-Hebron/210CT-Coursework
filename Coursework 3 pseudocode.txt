@@ -1,0 +1,10 @@
+s  <- (INT(INPUT('Input Number: ')))                     	
+ans <- 0                                                			
+IF s >= 0:						
+    WHILE ans*ans <= s:					
+        ans += 1						
+    IF ans*ans != s:					
+        ans=ans -1					
+        PRINT ('The Highest Square Number is', ans)	
+    ELSE: PRINT('The Highest Square Number is', ans)	
+ELSE: PRINT (s,'is an error')				
