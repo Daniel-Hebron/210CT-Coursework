@@ -1,15 +1,13 @@
-def RV(word):
+def RemoveVowels(word):
     if len(word) == 0:
         return word 
     else:
-        x = word[1:len(word) + 1]
-        firstLetter = word[0]
+        x = word[1:len(word) + 1] #1: will work from first letter of word until last
+        firstLetter = word[0] #zero operator
         if firstLetter in "aeiouAEIOU":
-
-            return RV(x)
+            return RemoveVowels(x) #will loop & delete each vowel in word until none left
         else:
-            return firstLetter + RV(x)
-
+            return firstLetter + RemoveVowels(x)
 word=(str(input('Input Word: ')))
 
-print(RV(word))
+print(RemoveVowels(word))
