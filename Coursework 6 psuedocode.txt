@@ -1,0 +1,2 @@
+S <- input(str('Enter Sentence: '))
+print(" ".join(S.split()[::-1]))

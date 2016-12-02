@@ -1,0 +1,34 @@
+#Unweighted graph data structure using adjacency list
+
+class GRAPH:
+    def __INIT__(self):
+        self.graph <- {} 
+
+    def NODE(self, label):
+        self.graph[label] <- [] 
+
+    def EDGE(self,N,E):
+        self.graph[N].append(E)
+        self.graph[E].append(N)
+
+    def GRAPH(self): 
+        for key,value in self.graph.items():
+            print(key,value)
+
+g <- GRAPH()
+
+g.insertNode('1')
+g.insertNode('2')
+g.insertNode('3')
+g.insertNode('4')
+g.insertNode('5')
+g.insertEdge('1','2')
+g.insertEdge('1', '2')
+g.insertEdge('2', '1')
+g.insertEdge('2', '5')
+g.insertEdge('4', '2')
+g.insertEdge('3', '5')
+g.insertEdge('5', '2')
+g.insertEdge('4', '1')
+
+g.GRAPH()

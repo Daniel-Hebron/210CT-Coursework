@@ -1,0 +1,49 @@
+//Addition
+
+ADDMATRIX(B,C):
+	D <- INPUT matrix order					[1]
+	for X <- to D:						[n]
+		for y <- to D:					[n*n]
+			SUM[X,Y] <- B[X,Y] + C[X,Y]		[n*n]
+	RETURN SUM						[1]
+
+
+//Subtraction
+
+SUBMATRIX(B,C):
+	D <- INPUT matrix order					[1]
+	for X <- to D:						[n]
+		for Y <- to D:					[n*n]
+			SUM[X,Y] <- B[X,Y] - C[X,Y]		[n*n]
+	RETURN SUM						[1]
+
+
+//MULTIPLICATION
+
+MULTIPLYMATRIX(B,C):
+	D <- INPUT matrix order					[1]
+	for X <-1 to D:						[n]
+		for Y <-1 to D:					[n*n]
+			SUM[X,Y] <- 0				[n*n]
+for X <- to D:							[n]
+	for Y <- to D:						[n*n]
+		for Z <- to D:					[n*n*n] 
+		SUM[X,Y] <- SUM[X,Y] + B[X,Z] * C[Z,Y]		[n*n*n]
+	RETURN SUM						[1]
+
+
+R = B*C +2 (B+C)
+R1 <- MULT_MAT(B,C)
+R2 <- ADD_MAT(B,C)
+R3 <- MULT_MAT(R2,2)
+R <- R1 + R3
+
+6 + 7n^2 + 2n^4 = 0(n^2)
+
+
+
+
+
+
+
+
