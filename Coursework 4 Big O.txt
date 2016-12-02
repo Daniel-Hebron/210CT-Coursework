@@ -50,4 +50,4 @@ if s >= 0:						[n]
     else: print('The Highest Square Number is', ans)	[1]
 else: print(s,'is an error')				[1]
 
-6+5n <- O(n)
+6+5n = O(n)
