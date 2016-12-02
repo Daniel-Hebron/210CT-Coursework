@@ -4,6 +4,5 @@ def TZ(n):
         n = n / 5
         count = count + n
     return int(count)
-
 n = int(input ('Factorial : '))
 print (TZ(n))
