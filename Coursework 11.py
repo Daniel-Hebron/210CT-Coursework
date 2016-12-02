@@ -42,7 +42,6 @@ class List(object):
                         else:
                               n.prev.next = n.next
                               n.next.prev = n.prev
-
                         break
                   n = n.next
 
