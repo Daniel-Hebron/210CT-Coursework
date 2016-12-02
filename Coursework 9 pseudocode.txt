@@ -1,0 +1,20 @@
+L <- (input('Interval: ')).split()
+array <- [2, 3, 5, 7, 9, 13]
+low = 10
+high = 14
+
+def BSA(low, high, currentlist, n=len(array)):
+    LB <- 1
+    HB <- n
+
+    WHILE LowBoundary < HighBoundary:
+        middle <- INT((LowBoundary+HighBoundary)/2)  
+        if currentlist(mid) >= low and currentlist(mid) <= high:
+            RETURN True
+        elif currentlist(mid) > high:
+            HighBoundary -=1  
+        elif currentlist(mid) < low:
+            LowBoundary +=1  
+    RETURN False
+
+print(BSA(INT(L[0]), INT(L[1]), array))
