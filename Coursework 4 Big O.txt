@@ -39,8 +39,8 @@ print(trailingZeros)				[1]
 
 Coursework 3 - Highest Square Number (pseudocode and Big O)
 
-s <- (int(input('Input Number: ')))                     [1]
-ans <- 0                                                [1]
+s = (int(input('Input Number: ')))                     [1]
+ans = 0                                                [1]
 if s >= 0:						[n]
     while ans*ans <= s:					[n]
         ans += 1					[n]
