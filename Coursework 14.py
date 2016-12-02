@@ -14,14 +14,14 @@ class Graph:
             print(key,value)
 
     def DFS(self,v):
-        stack = []
+        stack = [] # starting dfs with stack
         visited = []
         stack.append(v)
-        while stack != []:
+        while stack != []: #loops through the graph using first item in stack
             u = stack.pop()
             if u not in visited:
                 visited.append(u)
-                for edge in self.graph[u]:
+                for edge in self.graph[u]: #loop through edge connected to that vertex & add edge to stack
                     stack.append(edge)
                     file = open("DFS.txt", "w")
                     file.write(str(visited))
@@ -29,15 +29,15 @@ class Graph:
         return visited
 
     def BFS(self, v):
-        Q = []
+        queue = [] #create queue
         visited = []
-        Q.insert(0,v)
-        while Q != []:
-            u = Q.pop()
+        queue.insert(0,v)
+        while queue != []: #loops through graph using start value
+            u = queue.pop()
             if u not in visited:
-                visited.append(u)
-                for edge in self.graph[u]:
-                    Q.insert(0,edge)
+                visited.append(u) #add vertex to visited
+                for edge in self.graph[u]:#loops through edges connected to that verex and put into queue
+                    queue.insert(0,edge)
                     file = open("BFS.txt", "w")
                     file.write(str(visited))
                     file.close
